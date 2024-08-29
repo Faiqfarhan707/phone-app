@@ -1,8 +1,4 @@
-// console.log('cart items');
-
 const cartItems = JSON.parse(localStorage.getItem('cartItems'));
-// console.log(cartItems)
-
 const div = document.querySelector('div');
 const totalAmount = document.querySelector('#total-amount');
 
@@ -10,7 +6,6 @@ function renderItems (){
     let total = 0;
     if(cartItems != null && cartItems.length > 0){
         for(let i = 0; i < cartItems.length; i++){
-            // console.log(cartItems[i]);
             total += cartItems[i].price * cartItems[i].quantity
             div.innerHTML += `
             <div class="border border-light rounded m-5 p-3">
@@ -62,10 +57,3 @@ function deleteItem(i){
     totalAmount.innerHTML = ''
     renderItems()
 }
-
-// localStorage.setItem('kis naam sa krwana ha' , 'value stringify wali');
-
-// localStorage.getItem('kis naam sa save krwaya ha');
-
-// JSON.stringify()
-// JSON.parse()
