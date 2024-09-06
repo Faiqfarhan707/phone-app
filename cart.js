@@ -23,7 +23,6 @@ function renderItems (){
         }
         totalAmount.innerHTML = `Total Amount = ${total}`
     }else{
-        console.log('cart item empty ha maalik')
         div.innerHTML = `
         <h3 class="text-center">No Item Found...</h3>
         `
